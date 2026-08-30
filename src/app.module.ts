@@ -4,6 +4,7 @@ import { APP_GUARD, APP_INTERCEPTOR, APP_FILTER } from '@nestjs/core';
 import { validateEnv } from './config/env.schema';
 import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
+import { ItemsModule } from './items/items.module';
 import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { RolesGuard } from './auth/guards/roles.guard';
 import { RequestContextMiddleware } from './common/middleware/request-context.middleware';
@@ -20,6 +21,7 @@ import { AppService } from './app.service';
     }),
     PrismaModule,
     AuthModule,
+    ItemsModule,
   ],
   controllers: [AppController],
   providers: [
