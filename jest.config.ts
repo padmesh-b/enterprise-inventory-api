@@ -25,6 +25,7 @@ const config: Config = {
   ],
   coverageDirectory: './coverage',
   testEnvironment: 'node',
+  transformIgnorePatterns: ['/node_modules/(?!@nestjs)'],
 };
 
 export default config;
