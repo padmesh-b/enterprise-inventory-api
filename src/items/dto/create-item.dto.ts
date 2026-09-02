@@ -18,6 +18,11 @@ export class CreateItemDto {
   @IsOptional()
   description?: string;
 
+  @ApiPropertyOptional({ example: 'Electronics', description: 'Item category' })
+  @IsString()
+  @IsOptional()
+  category?: string;
+
   @ApiProperty({ example: 15, description: 'Inventory stock quantity' })
   @IsInt()
   @Min(0, { message: 'Quantity cannot be negative' })

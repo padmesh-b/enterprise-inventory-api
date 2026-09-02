@@ -8,12 +8,17 @@ export class UpdateItemDto {
   @IsOptional()
   title?: string;
 
-  @ApiPropertyOptional({ example: 'Updated product description', description: 'Updated item description' })
+  @ApiPropertyOptional({ example: 'Updated description', description: 'Detailed item description' })
   @IsString()
   @IsOptional()
   description?: string;
 
-  @ApiPropertyOptional({ example: 25, description: 'Updated inventory stock quantity' })
+  @ApiPropertyOptional({ example: 'Electronics', description: 'Item category' })
+  @IsString()
+  @IsOptional()
+  category?: string;
+
+  @ApiPropertyOptional({ example: 20, description: 'Inventory stock quantity' })
   @IsInt()
   @Min(0, { message: 'Quantity cannot be negative' })
   @IsOptional()

@@ -55,6 +55,7 @@ model Item {
   sku         String
   title       String
   description String?
+  category    String?
   quantity    Int        @default(0)
   status      ItemStatus @default(IN_STOCK)
   deletedAt   DateTime?
