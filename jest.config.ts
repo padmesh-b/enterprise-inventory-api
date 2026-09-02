@@ -24,7 +24,16 @@ const config: Config = {
     'apps/**/*.(t|j)s',
   ],
   coverageDirectory: './coverage',
+  coverageThreshold: {
+    global: {
+      branches: 75,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
   testEnvironment: 'node',
+  transformIgnorePatterns: ['/node_modules/(?!@nestjs)'],
 };
 
 export default config;
